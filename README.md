@@ -18,4 +18,90 @@ Le projet permet à plusieurs utilisateurs de se connecter à un serveur, d'envo
 ---
 
 ## 🧱 Architecture du projet
+📁 JAVA-CHATROOM
+│
+├── 📂 server
+│ ├── Server.java
+│ ├── ClientHandler.java
+│ └── ...
+│
+├── 📂 client
+│ ├── Client.java
+│ └── ...
+│
+└── README.md
 
+### 🖥️ Serveur
+- Démarre un socket serveur (`ServerSocket`)
+- Accepte les connexions de clients
+- Crée un thread `ClientHandler` par client
+- Diffuse les messages à tous les clients connectés
+
+### 🧑‍💻 Client
+- Se connecte au serveur via socket TCP
+- Envoie les messages au serveur
+- Reçoit les messages des autres utilisateurs en temps réel
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Java 8+**
+- **Sockets TCP**
+- **Threads**
+- **Architecture Client/Serveur**
+
+---
+
+## ▶️ Lancer le projet
+
+### 1️⃣ Lancer le serveur
+```bash
+java Server
+2️⃣ Lancer un ou plusieurs clients
+java Client
+
+
+Chaque client se connecte automatiquement au serveur via l'adresse IP et le port configurés.
+
+⚙️ Configuration
+
+Dans ton code, modifie si nécessaire :
+
+String SERVER_IP = "127.0.0.1";
+int SERVER_PORT = 5000;
+
+
+Pour fonctionner sur un réseau local, remplace 127.0.0.1 par l’adresse IP de la machine serveur.
+
+📡 Fonctionnement interne
+
+Le serveur écoute sur un port TCP.
+
+Lorsqu’un client se connecte, un thread dédié lui est attribué.
+
+Chaque message reçu par le serveur est redistribué à tous les clients connectés.
+
+Le système est basé sur une boucle infinie de lecture/écriture via BufferedReader et PrintWriter.
+
+📌 Améliorations possibles
+
+Ajout d’une interface graphique JavaFX ou Swing
+
+Sécurisation (SSL, authentification)
+
+Gestion des pseudos et des couleurs
+
+Envoi de fichiers
+
+Historique des messages
+
+👨‍💻 Auteur
+
+Projet réalisé par Mohammed Ryad Benyakoub
+📧 Contact : (mets ton email si tu veux)
+
+📜 Licence
+
+Projet libre pour apprentissage et démonstration.
+Vous pouvez le modifier, l'améliorer et le distribuer.
