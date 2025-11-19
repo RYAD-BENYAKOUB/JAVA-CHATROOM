@@ -129,13 +129,3 @@ Projet libre pour apprentissage et démonstration.
 Vous pouvez le modifier, l'améliorer et le distribuer.
 
 ```
-
----
-
-Si tu veux, je peux aussi :  
-✅ écrire un README plus professionnel  
-✅ ajouter des images ou schémas  
-✅ écrire une documentation complète
-
-Souhaites-tu une version améliorée ?
-```
